@@ -60,7 +60,7 @@ public class PersonService {
                 .message(message + id)
                 .build();
     }
-    
+
     private Person verifyIfExists(Long id) throws PersonNotFoundException{
         return personRepository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
     }
